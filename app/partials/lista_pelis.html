@@ -1,1 +1,15 @@
-<p>This is the partial for view 1.</p>
+<h1>Estrenos por países</h1>
+
+<button class="btn btn-info" ng-click="loadMovies(country.code)" ng-repeat="country in countries">
+    {{country.name}}
+</button>
+
+<div class="pin-layout">
+    <div ng-repeat="movie in movies">
+        <div class="thumbnail">
+            <h3 class="caption">{{movie.title}}</h3>
+            <img width="180" ng-src="{{movie.posters.detailed}}" alt="{{movie.title}}">
+            <p>{{movie.synopsis}}</p>
+        </div>
+    </div>
+</div>
